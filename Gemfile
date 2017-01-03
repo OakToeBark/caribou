@@ -15,6 +15,8 @@ gem 'devise', '~> 3.4.1'
 gem 'toastr-rails'
 gem 'sendgrid-ruby'
 
+gem 'activeadmin', github: 'activeadmin'
+
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
