@@ -16,6 +16,7 @@ gem 'toastr-rails'
 gem 'sendgrid-ruby'
 
 gem 'activeadmin', github: 'activeadmin'
+gem 'active_skin'
 
 group :development, :test do
   gem 'byebug'
