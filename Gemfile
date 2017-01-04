@@ -20,6 +20,8 @@ gem 'active_skin'
 
 gem 'paperclip', '~> 4.2.1'
 
+gem 'friendly_id', '~> 5.1.0'
+
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
