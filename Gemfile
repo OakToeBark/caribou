@@ -18,6 +18,8 @@ gem 'sendgrid-ruby'
 gem 'activeadmin', github: 'activeadmin'
 gem 'active_skin'
 
+gem 'paperclip', '~> 4.2.1'
+
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
