@@ -2,14 +2,14 @@
   <!-- Dropdown Structure -->
   <ul id="dropdown1" class="dropdown-content">
     <li><%= link_to "Profile", edit_user_registration_path %></li>
-    <li><a href="#!">Courses</a></li>
+    <li><%= link_to "My Projects", myprojects_path %></li>
     <li class="divider"></li>
     <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></a></li>
   </ul>
 
   <ul id="dropdown2" class="dropdown-content">
     <li><%= link_to "Profile", edit_user_registration_path %></li>
-    <li><a href="#!">Courses</a></li>
+      <li><%= link_to "My Projects", myprojects_path %></li>
     <li class="divider"></li>
     <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></a></li>
   </ul>
@@ -27,7 +27,7 @@
         <% else %>
           <!-- Dropdown Trigger -->
           <li><a class="dropdown-button valign-wrapper" href="#!" data-activates="dropdown1">
-            <%= image_tag avatar_url(current_user), class: "circle responsive-img" %>&nbsp;
+            <%= image_tag avatar_url(current_user), class: "circle responsive-img avatar-small" %>&nbsp;
             <%= current_user.name %><i class="material-icons right">arrow_drop_down</i></a>
           </li>
         <% end %>
@@ -41,7 +41,7 @@
         <% else %>
           <!-- Dropdown Trigger -->
           <li><a class="dropdown-button valign-wrapper" href="#!" data-activates="dropdown2">
-            <%= image_tag avatar_url(current_user), class: "circle responsive-img" %>&nbsp;
+            <%= image_tag avatar_url(current_user), class: "circle responsive-img avatar-small" %>&nbsp;
             <%= current_user.name %><i class="material-icons right">arrow_drop_down</i></a>
           </li>
         <% end %>
