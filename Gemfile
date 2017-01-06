@@ -15,6 +15,9 @@ gem 'devise', '~> 3.4.1'
 gem 'toastr-rails'
 gem 'sendgrid-ruby'
 
+gem 'omniauth'
+gem 'omniauth-google-oauth2'
+
 gem 'activeadmin', github: 'activeadmin'
 gem 'active_skin'
 
