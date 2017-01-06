@@ -17,7 +17,7 @@ class ProjectController < ApplicationController
       @joined = current_user.projects.include?(@project)
     end
 
-    #@users = @project.users.order('created_at desc').first(10)
+    @users = @project.users.order('created_at desc').first(10)
   end
 
   def list
