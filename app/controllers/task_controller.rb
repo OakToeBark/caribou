@@ -20,8 +20,8 @@ class TaskController < ApplicationController
       @next_task = @task.next
       @prev_task = @task.prev
     else
-      flash[:notice] = "No permission to this"
+      flash[:notice] = "No permission to this" # This is where the permission bug is happening once logged in
       redirect_to project
-    end  
+    end
   end
 end
