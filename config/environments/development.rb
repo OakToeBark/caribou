@@ -46,8 +46,8 @@ Rails.application.configure do
      address: 'smtp.sendgrid.net',
      port: 587,
      enable_starttls_auto: true,
-     user_name: 'creatorarcade',
-     password: '_Baseball378',
+     user_name: 'apikey',
+     password: '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',
      authentication: 'plain'
   }
 end

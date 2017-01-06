@@ -1,11 +1,11 @@
 class MyMailer < ActionMailer::Base
 
   def sendgrid_client
-    @sendgrid_client ||= SendGrid::API.new(api_key: "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")
+    @sendgrid_client ||= SendGrid::API.new(api_key: "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")
   end
 
   def new_user(user)
-    template_id = "welcome"
+    template_id = "e3606fe6-77f2-4ab5-951f-986972a701f8"
 
     data = {
       "personalizations": [
