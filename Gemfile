@@ -17,6 +17,7 @@ gem 'sendgrid-ruby'
 
 gem 'omniauth'
 gem 'omniauth-google-oauth2'
+gem 'omniauth-facebook'
 
 gem 'activeadmin', github: 'activeadmin'
 gem 'active_skin'
