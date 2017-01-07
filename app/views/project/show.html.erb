@@ -19,7 +19,7 @@
               <button type="submit" class="btn pink darken-2">Take this Project</button>
             <% end %>
           <% end %>
-          
+
         </div>
 
       <% else %> <!-- If the user has already joined the project -->
@@ -67,6 +67,11 @@
         </div>
 
       </div>
+    </div>
+    <div class="card-content">
+      <h4>Reviews</h4>
+      <div><%= render 'reviews/form' if @joined && !@hasReview %></div>
+      <div><%= render 'reviews/index' %></div>
     </div>
   </div>
 

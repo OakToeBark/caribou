@@ -9,6 +9,7 @@ class User < ActiveRecord::Base
 
   has_many :subscriptions
   has_many :projects, through: :subscriptions
+  has_many :reviews
 
   after_create :send_notification
 
