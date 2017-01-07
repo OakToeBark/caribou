@@ -1,0 +1,27 @@
+<% if @reviews.blank? %>
+  <span class="center">There is no review yet</span>
+<% end %>
+
+<% @reviews.order("id desc").each do |r| %>
+  <hr>
+  <div class="row">
+
+    <div class="col m1">
+      <%= image_tag avatar_url(current_user), class: "circle responsive-img avatar-small" %>
+    </div>
+
+    <div class="col m10">
+      <div>
+        <strong><%= current_user%></strong>
+        <!-- current_user review model fucked up-->
+        <span class="right"><%= r.created_at %></span>
+      </div>
+      <div><%= r.star %></div>
+      <div><% r.comment %></div>
+      <div>
+        <%= link_to "Remove", [@project, r], method: :delete, data: {confirm: "Are you sure?"} %>
+      </div>
+    </div>
+
+  </div>
+<% end %>
