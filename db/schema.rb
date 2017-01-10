@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170106032907) do
+ActiveRecord::Schema.define(version: 20170110002744) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace"
@@ -74,6 +74,18 @@ ActiveRecord::Schema.define(version: 20170106032907) do
 
   add_index "projects", ["slug"], name: "index_projects_on_slug", unique: true
 
+  create_table "reviews", force: :cascade do |t|
+    t.integer  "project_id"
+    t.integer  "user_id"
+    t.text     "comment"
+    t.datetime "created_at", null: false
+    t.integer  "star"
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "reviews", ["project_id"], name: "index_reviews_on_project_id"
+  add_index "reviews", ["user_id"], name: "index_reviews_on_user_id"
+
   create_table "subscriptions", force: :cascade do |t|
     t.integer  "project_id"
     t.integer  "user_id"
@@ -90,7 +102,7 @@ ActiveRecord::Schema.define(version: 20170106032907) do
     t.text     "note"
     t.string   "video"
     t.boolean  "header",     default: false, null: false
-    t.string   "tag"
+    t.integer  "tag"
     t.integer  "project_id"
     t.datetime "created_at",                 null: false
     t.datetime "updated_at",                 null: false
