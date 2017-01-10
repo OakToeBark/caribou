@@ -16,12 +16,22 @@
         <!-- current_user review model fucked up-->
         <span class="right"><%= r.created_at %></span>
       </div>
+      <!-- <div id="stars_<%= r.id %>"></div> -->
       <div><%= r.star %></div>
       <div><% r.comment %></div>
       <div>
         <%= link_to "Remove", [@project, r], method: :delete, data: {confirm: "Are you sure?"} %>
       </div>
-    </div>
 
+    </div>
   </div>
+
+<!-- <script>
+  $('#stars_<%= r.id %>').raty({
+    path: '/assets',
+    readOnly: true,
+    score: <%= r.star %>
+  });
+</script> -->
+
 <% end %>
