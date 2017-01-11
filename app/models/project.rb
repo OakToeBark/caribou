@@ -19,4 +19,8 @@ class Project < ActiveRecord::Base
   def shortname
     name.length > 25? name[0..25] + "..." : name
   end
+
+  def price_in_cents
+    price*100
+  end
 end

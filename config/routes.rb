@@ -9,7 +9,8 @@ Rails.application.routes.draw do
 
   get 'pages/about'
   get '/myprojects' => 'project#list'
-  post '/free' => 'charge#free'
+  post '/free' => 'charge#free' # go to the charge controller and run the free function
+  post '/pay' => 'charge#pay' # go to the charge controller and run the pay function
 
   root 'project#index'
 

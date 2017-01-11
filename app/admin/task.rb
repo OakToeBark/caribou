@@ -4,7 +4,10 @@ ActiveAdmin.register Task do
   sortable tree: false,
             sorting_attribute: :tag
 
-  index :as => :sortable do
+
+
+  index :as => :sortable do |task|
+    # understand why |task| was needed
     label :title
 
     actions
