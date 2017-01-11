@@ -10,19 +10,19 @@ class ChargeController < ApplicationController
   end
 
   def pay
-    project =Project.find(params[:project_id])
+     project = Project.find(params[:project_id])
 
-   customer = Stripe::Customer.create(
-     :email => params[:stripeEmail],
-     :source  => params[:stripeToken]
-     )
+     customer = Stripe::Customer.create(
+       :email => params[:stripeEmail],
+       :source  => params[:stripeToken]
+       )
 
-   charge = Stripe::Charge.create(
-     :customer    => customer.id,
-     :amount      => project.price_in_cents,
-     :description => project.name,
-     :currency    => 'usd'
-     )
+     charge = Stripe::Charge.create(
+       :customer    => customer.id,
+       :amount      => project.price_in_cents,
+       :description => project.name,
+       :currency    => 'usd'
+       )
 
      if charge
        current_user.subscriptions.create(project: project)
