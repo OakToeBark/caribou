@@ -42,7 +42,7 @@
               <script src="https://checkout.stripe.com/checkout.js"></script>
               <%= hidden_field_tag 'stripeToken' %>
               <%= hidden_field_tag 'stripeEmail' %>
-              <%= hidden_field_tag 'project_id' %>
+              <%= hidden_field_tag 'project_id', @project.id %>
 
               <button id="customButton" type="button" class="btn pink darken-2">Purchase this class</button></br>
 
