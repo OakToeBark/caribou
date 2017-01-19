@@ -120,14 +120,13 @@
             <p><%= @reviews.count %> <%= @reviews.count > 1? "Reviews" : "Review" %></p> -->
             <hr>
             <%= @project.content %>
-
             <h4>Reviews</h4>
             <div><%= render 'reviews/form' if @joined && !@hasReview %></div>
             <div><%= render 'reviews/index' %></div>
 
+
           </div>
         </div>
-
         <div id="videos" class="col s10 offset-s1">
           <div class="collection" data-no-turbolink>
             <% @tasks.each do |task| %>
@@ -146,11 +145,10 @@
 
         <div id="discussion" class="col s10 offset-s1">
           <!-- Discussion will be placed here -->
-          var disqus_shortname = 'creator-arcade';
-          var DISQUS_IDENTIFIER = '<%= @project.id %>';
-          var PAGE_URL = '<%= @project.name %>';
+
 
           <div id="disqus_thread"></div>
+
           <script>
 
 

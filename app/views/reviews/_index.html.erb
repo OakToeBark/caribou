@@ -7,12 +7,21 @@
   <div class="row">
 
     <div class="col m1">
-      <%= image_tag avatar_url(current_user), class: "circle responsive-img avatar-small" %>
+      <!-- Bugged with facebook authentication but not google & also text portion of review not showing -->
+
+
+      <!--<% if(!user_signed_in?) %>
+        <li><%= link_to "Sign Up", new_user_registration_path %></li>
+        <li><%= link_to "Login", new_user_session_path %></li>
+      <% else %>-->
+          <%= image_tag avatar_url(r.user), class: "circle responsive-img avatar-small" %>
+      <!--<% end %>-->
+
     </div>
 
     <div class="col m10">
       <div>
-        <strong><%= current_user%></strong>
+        <strong><%= r.user.name%></strong>
         <!-- current_user review model fucked up-->
         <span class="right"><%= r.created_at %></span>
       </div>
