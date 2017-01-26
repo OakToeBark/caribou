@@ -4,10 +4,13 @@ Rails.application.routes.draw do
 
   get 'pages/home', :to => 'pages#home' # figure out how to call the home page
 
+  get 'pages/lander', :to => 'pages#lander'
+
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
   get 'pages/about'
+  get 'pages/projects'
   get '/myprojects' => 'project#list'
   post '/free' => 'charge#free' # go to the charge controller and run the free function
   post '/pay' => 'charge#pay' # go to the charge controller and run the pay function

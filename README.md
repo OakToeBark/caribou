@@ -17,7 +17,7 @@ Things you may want to cover:
 After you have use brew to install rails and ruby then make sure that you set up
 the database by running
 
-'''rake db:migrate'''
+rake db:migrate
 
 the server is localhost:3000
 
